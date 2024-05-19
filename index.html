@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .wrapper {
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        perspective: 10px;
+      }
+
+      .container {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-style: preserve-3d;
+        z-index: -1;
+      }
+
+      .background,
+      .foreground {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      .background {
+        transform: translateZ(-40px) scale(5);
+      }
+
+      .foreground {
+        transform: translateZ(-20px) scale(3);
+      }
+
+      h1 {
+        position: absolute;
+        top: 3rem;
+        letter-spacing: 4px;
+        font-size: 7rem;
+        color: white;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        margin: 0;
+      }
+
+      section {
+        background: rgb(45, 45, 45);
+        color: #fff;
+        padding: 5rem 0px;
+      }
+
+      .secHeading {
+        font-size: 5rem;
+        padding: 0px 10rem;
+      }
+
+      .text {
+        font-size: 1.25rem;
+        padding: 0 8rem;
+        margin: 5rem 0;
+        /* background: rgb(45, 45, 45); */
+      }
+
+      .bg1 {
+        background-image: url(https://codehelp-parallax-website.netlify.app/assets/sport-1.jpg);
+      }
+
+      .bg2 {
+        background-image: url(https://codehelp-parallax-website.netlify.app/assets/sport-2.jpg);
+      }
+
+      .bg3 {
+        background-image: url(https://codehelp-parallax-website.netlify.app/assets/sport-3.jpg);
+      }
+
+      .bg {
+        position: relative;
+        background-attachment: fixed;
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .desc {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0.5rem 2.5rem;
+        background-color: white;
+        color: black;
+        border-radius: 10px;
+        border: 2px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <img src="https://codehelp-parallax-website.netlify.app/assets/background.png" class="background" />
+        <img src="https://codehelp-parallax-website.netlify.app/assets/foreground.png" class="foreground" />
+        <h1>ADVENTURE</h1>
+      </div>
+
+      <section>
+        <h2 class="secHeading">Adventure Time</h2>
+        <p class="text">
+          Adventure is the pursuit of thrilling, novel experiences that push individuals
+          out of their comfort zones. It embodies the spirit of exploration and discovery,
+           often involving elements of risk, challenge, and uncertainty. Adventures can take many forms,
+           ranging from physical activities like hiking, mountain climbing, and scuba diving, to cultural explorations
+           such as traveling to unfamiliar places, learning new languages, and immersing oneself in different customs.
+          <br />
+          <br />
+          Historically, adventure has been a driving force behind human progress.
+          Explorers like Christopher Columbus, Marco Polo, and Amelia Earhart embarked on perilous
+          journeys that expanded geographical knowledge and cultural horizons. In contemporary times,
+          adventure continues to inspire individuals to pursue extraordinary feats, whether climbing the highest peaks,
+           sailing around the world, or embarking on personal quests for meaning and fulfillment.
+          Ultimately, adventure enriches life by adding layers of experience, excitement, and learning, making it an essential component of the human spirit.
+        </p>
+
+        <div class="bg bg1">
+          <h2 class="desc">BIKING</h2>
+        </div>
+        <p class="text">
+
+        Adventure biking, also known as bikepacking,
+         is a dynamic blend of mountain biking, touring, and backpacking,
+         designed for those who seek the thrill of exploration and the challenge
+         of traversing diverse terrains. This form of cycling involves multi-day,
+          self-sustained journeys through remote and rugged landscapes, requiring riders
+          to carry essential gear such as camping equipment, food, and clothing on their bikes.
+          Equipped with sturdy, versatile bikes, adventure bikers navigate established trails and
+          off-the-beaten-path routes, often facing long distances, steep climbs, and unpredictable weather.
+          The activity demands significant physical stamina, mental resilience, and skills in bike maintenance,
+           first aid, and outdoor survival, offering an immersive experience in nature.
+          <br />
+          <br />
+          The benefits of adventure biking are multifaceted, encompassing physical health,
+           mental well-being, and environmental sustainability. It improves cardiovascular
+           fitness, muscle strength, and mental health, while fostering a deep appreciation for
+            natural landscapes. Additionally, the adventure biking community is characterized by
+             a strong sense of camaraderie and shared passion for exploration, with cyclists connecting
+              through forums, social media, and events to exchange tips and stories. Renowned routes like
+               the Great Divide Mountain Bike Route in North America and the Pamir Highway in Central Asia
+               attract cyclists worldwide, offering diverse challenges and stunning scenery that enhance the overall adventure biking experience.
+        </p>
+
+        <div class="bg bg2">
+          <h2 class="desc">PARA GLIDING</h2>
+        </div>
+        <p class="text">
+          Paragliding is an exhilarating aerial sport where individuals experience
+          the freedom of flight using a lightweight, free-flying glider aircraft.
+           Pilots launch from hills, mountains, or cliffs, using wind currents to stay aloft.
+           The paraglider consists of a fabric wing and a harness, controlled through brake toggles
+           and weight shifting. This sport provides breathtaking views and the thrill of soaring like
+           a bird, attracting adventure enthusiasts seeking a unique perspective of the natural world.
+          <br />
+          <br />
+          Beyond the adrenaline rush, paragliding offers physical and mental benefits,
+          improving core strength, balance, focus, and stress relief. It also fosters a
+          deep connection to nature and a strong community among pilots who share experiences and tips.
+           Popular destinations like the Alps, Himalayas, and Andes draw enthusiasts worldwide, each offering
+           unique challenges and stunning landscapes.
+        </p>
+
+        <div class="bg bg3">
+          <h2 class="desc">SURFING</h2>
+        </div>
+        <p class="text">
+
+Surfing is an exhilarating water sport where individuals ride on the forward section or face of a moving wave, usually towards the shore. Surfers use specially designed boards to navigate and perform maneuvers on waves, utilizing balance, timing, and agility. This sport is not only a test of physical prowess but also a harmonious dance with the ocean, providing a unique connection to nature. Popular surfing destinations include Hawaii, Australia, and California, known for their consistently high-quality waves and vibrant surfing communities.
+          <br />
+          <br />
+          The benefits of surfing extend beyond the thrill of riding waves.
+          Physically, it improves cardiovascular fitness, strength, and flexibility,
+           especially in the core and upper body. Mentally, surfing offers stress relief,
+            heightened focus, and a sense of achievement as surfers read and react to the
+             dynamic ocean environment. The surfing community is tight-knit and supportive,
+              with a shared culture that celebrates the ocean, environmental stewardship, and
+               the pursuit of perfect waves. This camaraderie and connection to nature make surfing
+                a deeply fulfilling and enriching activity.
+
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
